@@ -12,14 +12,17 @@
 
   <mat-optgroup *ngFor="let group of stateList">
           <div>
-          <mat-checkbox [checked]="group.selected" (change)="toggleSelection($event, group)" 
+            <!-- Checkbox del gruppo -->
+          <mat-checkbox [checked]="group.selected" (change)="toggleSelection($event, group)"
             (click)="$event.stopPropagation()">
 			        {{group.letter}}
 		    	</mat-checkbox>
+          <!-- Triangolo per l'apertura del gruppo -->
           <button mat-button (click)="expandDocumentTypes(group)">
             <mat-icon>keyboard_arrow_down</mat-icon>
           </button>
-          </div>  
+          </div>
+          <!-- Options di ogni gruppo -->
           <mat-option *ngFor="let name of group.names" [value]="name"
              [ngClass]="isExpandCategory[group.letter] ? 'list-show' : 'list-hide'">
             {{name}}
