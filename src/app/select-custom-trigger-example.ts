@@ -25,6 +25,11 @@ export class SelectCustomTriggerExample {
     // expand only selected parent dropdown category with that childs
   }
 
+  
+  optionClicked(name) {
+    console.log("Selected option: ", name);
+  }
+
   toggleSelection(event: any, group: any) {
     //console.log(group);
     //console.log(event.checked);
