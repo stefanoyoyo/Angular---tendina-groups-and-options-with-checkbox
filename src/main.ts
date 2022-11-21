@@ -25,6 +25,7 @@ import { SelectCustomTriggerExample } from './app/custom-trigger/select-custom-t
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
+  // entryComponents: [SelectCustomTriggerExample],
   declarations: [SelectCustomTriggerExample],
   bootstrap: [SelectCustomTriggerExample],
   providers: [
