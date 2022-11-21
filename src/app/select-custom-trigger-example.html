@@ -15,7 +15,7 @@
             <!-- Checkbox del gruppo -->
           <mat-checkbox [checked]="group.selected" (change)="toggleSelection($event, group)"
             (click)="$event.stopPropagation()">
-			        {{group.letter}}
+			        {{group.label}}
 		    	</mat-checkbox>
           <!-- Triangolo per l'apertura del gruppo -->
           <button mat-button (click)="expandDocumentTypes(group)">
@@ -26,7 +26,7 @@
           <mat-option *ngFor="let name of group.names; let i = index;" 
              [value]="name"
              (click)="optionClicked(name, i)"
-             [ngClass]="isExpandCategory[group.letter] ? 'list-show' : 'list-hide'">
+             [ngClass]="isExpandCategory[group.label] ? 'list-show' : 'list-hide'">
             {{name}}
           </mat-option>
   </mat-optgroup>

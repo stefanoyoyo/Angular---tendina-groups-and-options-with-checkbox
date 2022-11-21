@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {FormControl} from '@angular/forms';
 
 export interface MatOptionsGroup {
-  letter: string;
+  label: string;
   names: string[];
 }
 
@@ -19,7 +19,7 @@ export class SelectCustomTriggerExample {
 
   expandDocumentTypes(group: any) {
     console.log("expanding dropdown", group);
-    this.isExpandCategory[group.letter] = !this.isExpandCategory[group.letter];
+    this.isExpandCategory[group.label] = !this.isExpandCategory[group.label];
     // expand only selected parent dropdown category with that childs
   }
 
@@ -45,63 +45,63 @@ export class SelectCustomTriggerExample {
   }
 
   optionsGroups: MatOptionsGroup[] = [{
-    letter: 'A',
+    label: 'A',
     names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
   }, {
-    letter: 'C',
+    label: 'C',
     names: ['California', 'Colorado', 'Connecticut']
   }, {
-    letter: 'D',
+    label: 'D',
     names: ['Delaware']
   }, {
-    letter: 'F',
+    label: 'F',
     names: ['Florida']
   }, {
-    letter: 'G',
+    label: 'G',
     names: ['Georgia']
   }, {
-    letter: 'H',
+    label: 'H',
     names: ['Hawaii']
   }, {
-    letter: 'I',
+    label: 'I',
     names: ['Idaho', 'Illinois', 'Indiana', 'Iowa']
   }, {
-    letter: 'K',
+    label: 'K',
     names: ['Kansas', 'Kentucky']
   }, {
-    letter: 'L',
+    label: 'L',
     names: ['Louisiana']
   }, {
-    letter: 'M',
+    label: 'M',
     names: ['Maine', 'Maryland', 'Massachusetts', 'Michigan',
       'Minnesota', 'Mississippi', 'Missouri', 'Montana']
   }, {
-    letter: 'N',
+    label: 'N',
     names: ['Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
       'New Mexico', 'New York', 'North Carolina', 'North Dakota']
   }, {
-    letter: 'O',
+    label: 'O',
     names: ['Ohio', 'Oklahoma', 'Oregon']
   }, {
-    letter: 'P',
+    label: 'P',
     names: ['Pennsylvania']
   }, {
-    letter: 'R',
+    label: 'R',
     names: ['Rhode Island']
   }, {
-    letter: 'S',
+    label: 'S',
     names: ['South Carolina', 'South Dakota']
   }, {
-    letter: 'T',
+    label: 'T',
     names: ['Tennessee', 'Texas']
   }, {
-    letter: 'U',
+    label: 'U',
     names: ['Utah']
   }, {
-    letter: 'V',
+    label: 'V',
     names: ['Vermont', 'Virginia']
   }, {
-    letter: 'W',
+    label: 'W',
     names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
   }];
 }
