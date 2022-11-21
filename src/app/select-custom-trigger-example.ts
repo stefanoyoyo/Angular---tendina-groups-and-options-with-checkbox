@@ -26,8 +26,8 @@ export class SelectCustomTriggerExample {
   }
 
   
-  optionClicked(name) {
-    console.log("Selected option: ", name);
+  optionClicked(name: string, index?: number) {
+    console.log("Selected option: ", name, 'having id: ', index);
   }
 
   toggleSelection(event: any, group: any) {

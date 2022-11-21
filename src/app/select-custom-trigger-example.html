@@ -23,9 +23,9 @@
           </button>
           </div>
           <!-- Options di ogni gruppo -->
-          <mat-option *ngFor="let name of group.names" 
+          <mat-option *ngFor="let name of group.names; let i = index;" 
              [value]="name"
-             (click)="optionClicked(name)"
+             (click)="optionClicked(name, i)"
              [ngClass]="isExpandCategory[group.letter] ? 'list-show' : 'list-hide'">
             {{name}}
           </mat-option>
