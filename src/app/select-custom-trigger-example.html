@@ -10,7 +10,7 @@
       </span>
     </mat-select-trigger>
 
-  <mat-optgroup *ngFor="let group of stateList">
+  <mat-optgroup *ngFor="let group of optionsGroups">
           <div>
             <!-- Checkbox del gruppo -->
           <mat-checkbox [checked]="group.selected" (change)="toggleSelection($event, group)"

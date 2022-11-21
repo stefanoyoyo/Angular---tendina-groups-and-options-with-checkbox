@@ -44,7 +44,7 @@ export class SelectCustomTriggerExample {
     // here select all childs for this particular group
   }
 
-  stateList: MatOptionsGroup[] = [{
+  optionsGroups: MatOptionsGroup[] = [{
     letter: 'A',
     names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
   }, {
