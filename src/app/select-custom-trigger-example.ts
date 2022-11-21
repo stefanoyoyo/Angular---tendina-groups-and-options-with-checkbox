@@ -1,11 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
-export interface MatOptionsGroup {
-  label: string;
-  options: string[];
-}
-
 /** @title Select with custom trigger text */
 @Component({
   selector: 'select-custom-trigger-example',
@@ -18,7 +13,7 @@ export class SelectCustomTriggerExample {
 
   expandDocumentTypes(group: any) {
     console.log('expanding dropdown', group);
-    this.isExpandCategory[group.label] = !this.isExpandCategory[group.label];
+    this.isExpandCategory[group.groupLabel] = !this.isExpandCategory[group.groupLabel];
     // expand only selected parent dropdown category with that childs
   }
 
@@ -44,43 +39,43 @@ export class SelectCustomTriggerExample {
 
   optionsGroups: MatOptionsGroup[] = [
     {
-      label: 'A',
+      groupLabel: 'A',
       options: ['Alabama', 'Alaska', 'Arizona', 'Arkansas'],
     },
     {
-      label: 'C',
+      groupLabel: 'C',
       options: ['California', 'Colorado', 'Connecticut'],
     },
     {
-      label: 'D',
+      groupLabel: 'D',
       options: ['Delaware'],
     },
     {
-      label: 'F',
+      groupLabel: 'F',
       options: ['Florida'],
     },
     {
-      label: 'G',
+      groupLabel: 'G',
       options: ['Georgia'],
     },
     {
-      label: 'H',
+      groupLabel: 'H',
       options: ['Hawaii'],
     },
     {
-      label: 'I',
+      groupLabel: 'I',
       options: ['Idaho', 'Illinois', 'Indiana', 'Iowa'],
     },
     {
-      label: 'K',
+      groupLabel: 'K',
       options: ['Kansas', 'Kentucky'],
     },
     {
-      label: 'L',
+      groupLabel: 'L',
       options: ['Louisiana'],
     },
     {
-      label: 'M',
+      groupLabel: 'M',
       options: [
         'Maine',
         'Maryland',
@@ -93,7 +88,7 @@ export class SelectCustomTriggerExample {
       ],
     },
     {
-      label: 'N',
+      groupLabel: 'N',
       options: [
         'Nebraska',
         'Nevada',
@@ -106,38 +101,44 @@ export class SelectCustomTriggerExample {
       ],
     },
     {
-      label: 'O',
+      groupLabel: 'O',
       options: ['Ohio', 'Oklahoma', 'Oregon'],
     },
     {
-      label: 'P',
+      groupLabel: 'P',
       options: ['Pennsylvania'],
     },
     {
-      label: 'R',
+      groupLabel: 'R',
       options: ['Rhode Island'],
     },
     {
-      label: 'S',
+      groupLabel: 'S',
       options: ['South Carolina', 'South Dakota'],
     },
     {
-      label: 'T',
+      groupLabel: 'T',
       options: ['Tennessee', 'Texas'],
     },
     {
-      label: 'U',
+      groupLabel: 'U',
       options: ['Utah'],
     },
     {
-      label: 'V',
+      groupLabel: 'V',
       options: ['Vermont', 'Virginia'],
     },
     {
-      label: 'W',
+      groupLabel: 'W',
       options: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming'],
     },
   ];
+}
+
+
+export interface MatOptionsGroup {
+  groupLabel: string;
+  options: string[];
 }
 
 /**  Copyright 2020 Google LLC. All Rights Reserved.
