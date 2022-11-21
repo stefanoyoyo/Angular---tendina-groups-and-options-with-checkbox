@@ -20,5 +20,11 @@ mat-option {
   left: 1em;
 }
 
+.list-hide {
+  height: 0 !important; 
+}
 
+.list-show {
+  height: auto !important; 
+} 
 
