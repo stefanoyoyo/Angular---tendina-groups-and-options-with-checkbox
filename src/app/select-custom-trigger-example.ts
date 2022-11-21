@@ -3,7 +3,7 @@ import {FormControl} from '@angular/forms';
 
 export interface MatOptionsGroup {
   label: string;
-  names: string[];
+  options: string[];
 }
 
 /** @title Select with custom trigger text */
@@ -34,9 +34,9 @@ export class SelectCustomTriggerExample {
     let states = this.states.value;
     states = states ? states : [];
     if(event.checked) {
-      states.push(...group.names)
+      states.push(...group.options)
     } else {
-      group.names.forEach((x: string) => states.splice(states.indexOf(x), 1));
+      group.options.forEach((x: string) => states.splice(states.indexOf(x), 1));
     }
     this.states.setValue(states);
     //console.log(states);
@@ -46,63 +46,63 @@ export class SelectCustomTriggerExample {
 
   optionsGroups: MatOptionsGroup[] = [{
     label: 'A',
-    names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
+    options: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
   }, {
     label: 'C',
-    names: ['California', 'Colorado', 'Connecticut']
+    options: ['California', 'Colorado', 'Connecticut']
   }, {
     label: 'D',
-    names: ['Delaware']
+    options: ['Delaware']
   }, {
     label: 'F',
-    names: ['Florida']
+    options: ['Florida']
   }, {
     label: 'G',
-    names: ['Georgia']
+    options: ['Georgia']
   }, {
     label: 'H',
-    names: ['Hawaii']
+    options: ['Hawaii']
   }, {
     label: 'I',
-    names: ['Idaho', 'Illinois', 'Indiana', 'Iowa']
+    options: ['Idaho', 'Illinois', 'Indiana', 'Iowa']
   }, {
     label: 'K',
-    names: ['Kansas', 'Kentucky']
+    options: ['Kansas', 'Kentucky']
   }, {
     label: 'L',
-    names: ['Louisiana']
+    options: ['Louisiana']
   }, {
     label: 'M',
-    names: ['Maine', 'Maryland', 'Massachusetts', 'Michigan',
+    options: ['Maine', 'Maryland', 'Massachusetts', 'Michigan',
       'Minnesota', 'Mississippi', 'Missouri', 'Montana']
   }, {
     label: 'N',
-    names: ['Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
+    options: ['Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
       'New Mexico', 'New York', 'North Carolina', 'North Dakota']
   }, {
     label: 'O',
-    names: ['Ohio', 'Oklahoma', 'Oregon']
+    options: ['Ohio', 'Oklahoma', 'Oregon']
   }, {
     label: 'P',
-    names: ['Pennsylvania']
+    options: ['Pennsylvania']
   }, {
     label: 'R',
-    names: ['Rhode Island']
+    options: ['Rhode Island']
   }, {
     label: 'S',
-    names: ['South Carolina', 'South Dakota']
+    options: ['South Carolina', 'South Dakota']
   }, {
     label: 'T',
-    names: ['Tennessee', 'Texas']
+    options: ['Tennessee', 'Texas']
   }, {
     label: 'U',
-    names: ['Utah']
+    options: ['Utah']
   }, {
     label: 'V',
-    names: ['Vermont', 'Virginia']
+    options: ['Vermont', 'Virginia']
   }, {
     label: 'W',
-    names: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
+    options: ['Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
   }];
 }
 
