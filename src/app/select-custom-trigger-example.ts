@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {FormControl} from '@angular/forms';
 
-export interface StateGroup {
+export interface MatOptionsGroup {
   letter: string;
   names: string[];
 }
@@ -14,9 +14,7 @@ export interface StateGroup {
 })
 export class SelectCustomTriggerExample {
   toppings = new FormControl();
-   isExpandCategory: boolean[] = [];
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
-
+  isExpandCategory: boolean[] = [];
   states = new FormControl();
 
   expandDocumentTypes(group: any) {
@@ -46,7 +44,7 @@ export class SelectCustomTriggerExample {
     // here select all childs for this particular group
   }
 
-  stateList: StateGroup[] = [{
+  stateList: MatOptionsGroup[] = [{
     letter: 'A',
     names: ['Alabama', 'Alaska', 'Arizona', 'Arkansas']
   }, {
