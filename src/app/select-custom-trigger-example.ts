@@ -13,7 +13,8 @@ export class SelectCustomTriggerExample {
 
   expandDocumentTypes(group: any) {
     console.log('expanding dropdown', group);
-    this.isExpandCategory[group.groupLabel] = !this.isExpandCategory[group.groupLabel];
+    this.isExpandCategory[group.groupLabel] =
+      !this.isExpandCategory[group.groupLabel];
     // expand only selected parent dropdown category with that childs
   }
 
@@ -135,6 +136,10 @@ export class SelectCustomTriggerExample {
   ];
 }
 
+export interface DropdownOptionsGroups {
+  label: string;
+  groups: MatOptionsGroup;
+}
 
 export interface MatOptionsGroup {
   groupLabel: string;
